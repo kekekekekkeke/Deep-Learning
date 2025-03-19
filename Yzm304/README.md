@@ -58,3 +58,6 @@ The challenge is to develop a reliable neural network model that can effectively
 It seems that under the same conditions the numpy method need more epochs to get a slighty worse result.
 Turns out a library made for deep learning methods such as Pyhtorch performs better then an unoptimized numpy implemantation.
 Upon further optimization and usage of other methods the results may come closer to the pytorch one however this assingment did not require that therefore i saw no point in doing so.
+It also seems like i did something wrong with the numpy implementation since while loss function seems alright the accuracy of the results implies there must be some sort of logic error.
+The confusion matrix showing almost all result were predicted to be negatives also supports that.
+However when executed again the numpy implementation sometimes do get it right and go up to %80 accuracy so the discrepancy might be the result of how the method was initialized.
