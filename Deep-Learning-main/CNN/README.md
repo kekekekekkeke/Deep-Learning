@@ -48,25 +48,20 @@ Aşağıda, kodu çalıştırdığınızda son epoch’ta elde edilen test doğr
 
 | Model                         | Test Doğruluk (%) |
 |-------------------------------|-------------------:|
-| Model 1 (LeNet-5)             | 98.20              |
-| Model 2 (LeNet-5 + BN + Drop) | 98.65              |
-| Model 3 (Adapted AlexNet)     | 99.02              |
-| Model 4 (CNN + SVM)           | 98.50              |
-| Model 5 (Custom Deep CNN)     | 99.30              |
+| Model 1 (LeNet-5)             | 0.9803             |
+| Model 2 (LeNet-5 + BN + Drop) | 0.9712            |
+| Model 3 (Adapted AlexNet)     | 0.9904            |
+| Model 4 (CNN + SVM)           | 0.9776             |
+| Model 5 (Custom Deep CNN)     | 0.9873            |
 
-> **Not:** Kendi çalıştırmanızda elde ettiğiniz değerleri bu tabloya yazabilirsiniz.
 
 ## Discussion & Observations  
 - **Model 3 ve Model 5** en yüksek doğruluğa ulaştı; derin ve geniş katmanlar sınıf ayrım gücünü artırdı.  
 - **LeNet-5 tabanlı modeller**, standart 28×28 yerine 224×224 girişle çalıştığı için ağırlıklı FC katmanları yüklendi ve daha yavaş eğitim gözlemlendi.  
-- **BatchNorm + Dropout** eklemesi (Model 2) küçük bir hız düşüşü getirirken aşırı uyum riskini azaltıp doğruluğu hafifçe iyileştirdi.  
-- **Hibrit Model 4**, klasik makine öğrenmesi (SVM) ile birleştirildiğinde bile rekabetçi sonuç verdi.
+- **BatchNorm + Dropout** eklemesi (Model 2) küçük bir hız düşüşü getirirken aynı zamanda doğruluğu da azalttı.  
+- **Hibrit Model 4**, klasik makine öğrenmesi (SVM) ile birleştirildiğinde bile yeterince iyi sonuç verdi.
 
-## Future Work  
-- **Veri augmentasyonu** (rotasyon, kaydırma, renk jütleme)  
-- **Farklı öğrenme oranı programları** (learning rate scheduling)  
-- **Diğer veri setleri**: CIFAR-10, Fashion-MNIST  
-- **Model optimizasyonu**: quantization, pruning vb.
+
 
 ## References  
 1. Y. LeCun, et al., “Gradient-Based Learning Applied to Document Recognition,” *Proceedings of the IEEE*, 1998.  
